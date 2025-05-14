@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <body>
+        <style>
+            body {background-color: rgb(17, 85, 17);}
+            body {color: aliceblue;}
+            button {background-color: lightgreen; }
+            h1,h2,label {font-style: oblique;}
+        </style>
+            <h1>Modifica il tuo profilo</h1>
+            <form method="post">
+                <label>Nome:
+                    <input type="text" name="nome" value="{{ dati['Nome'] }}" required>
+                </label><br><br>
+
+                <label>Cognome:
+                    <input type="text" name="cognome" value="{{ dati['Cognome'] }}" required>
+                </label><br><br>
+
+                <label>Sport:
+                    <input type="text" name="Sport" value="{{ dati['Sport'] }}">
+                </label><br><br>
+
+                <label>Giorno:
+                    <input type="text" name="Giorno" value="{{ dati['Giorno'] }}" required>
+                </label><br><br>
+
+                <label>Mese:
+                    <input type="text" name="Mese" value="{{ dati['Mese'] }}">
+                </label><br><br>
+
+                <label>Anno:
+                    <input type="text" name="Anno" value="{{ dati['Anno'] }}">
+                </label><br><br>
+
+                <label>Ora:
+                    <input type="text" name="Ora" value="{{ dati['Ora'] }}">
+                </label><br><br>
+
+                <label>Minuti:
+                    <input type="text" name="Minuti" value="{{ dati['Minuti'] }}">
+                </label><br><br>
+
+                <label>Note Opzionali:
+                    <input type="text" name="Note Opzionali" value="{{ dati['Note Opzionali'] }}">
+                </label><br><br>
+
+                <button type="submit">Salva</button>
+            </form>
+
+            <br>
+            <a href="{{ url_for('index') }}">Torna al profilo</a>
+    </body>
+    </html>
